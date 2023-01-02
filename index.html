@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    <title>ToDo</title>
+</head>
+<body>
+    <section class="main">
+        <h1 class="main-heading">My To-Do List</h1>
+        <div class="container">
+            <div class="input-area">
+                <input type="text" placeholder="Add To-Do item ..." name="todo" class="text-input" id="todo-input">
+                <button class="btn-submit" id="add-todo">
+                    <span>
+                        Add
+                    </span>
+                </button>
+            </div>
+            <div class="list-area">
+                <div id="todo-list">
+                    <!-- Append To-Do items from JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
