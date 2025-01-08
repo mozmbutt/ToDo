@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         var toDoText = document.createElement('p');
         toDoText.classList.add("to-do-text");
-        
+
         var removeBtn = document.createElement('button');
         removeBtn.value = 'Remove'
         removeBtn.classList.add("remove-to-do");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 e.target.parentElement.remove();
             }, 700);
         })
-        
+
         toDoText.innerHTML = toDo;
         toDoEle.appendChild(toDoText);
         toDoEle.appendChild(removeBtn);
