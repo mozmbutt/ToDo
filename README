@@ -1,0 +1,22 @@
+# Simple Todo List
+
+A clean and responsive Todo List application built with vanilla JavaScript, HTML, and CSS.
+
+## Features
+
+- Add new todo items
+- Remove items with fade animation
+- Responsive design
+- Clean, modern UI
+- Input validation
+
+## Getting Started
+
+1. Clone this repository
+2. Open `index.html` in your browser
+
+## Project Structure
+
+- `index.html`: The main HTML file that includes the Todo List application.
+- `app.js`: The JavaScript file that handles the application logic.
+- `app.css`: The CSS file that styles the Todo List application.

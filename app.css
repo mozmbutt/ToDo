@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 @keyframes fadein {
     from {
         transform: scale(0);
@@ -23,12 +35,13 @@ body {
 }
 
 .main {
-    width: 75%;
+    width: 100%;
     max-width: 1200px;
     background-color: #395B64;
-    padding: 32px;
-    margin: auto;
+    padding: 24px 16px;
+    margin: 16px auto;
     border-radius: 12px;
+    overflow: hidden;
 }
 
 .main-heading {
@@ -41,32 +54,40 @@ body {
 
 .container {
     margin-top: 24px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .input-area {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 4px;
+    gap: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .text-input {
     margin: 0;
     border: 1px solid #A5C9CA;
     border-radius: 4px;
-    width: 75%;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
-    width: 15%;
+    min-width: 80px;
+    padding: 8px 16px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.05rem;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-submit {
@@ -108,10 +129,19 @@ button {
     justify-content: space-between;
     align-items: center;
     background: #2C3333;
-    padding: 8px 24px;
+    padding: 12px 16px;
     border-radius: 8px;
     margin-top: 8px;
     animation: fadein 0.7s ease-in-out;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.to-do-text {
+    margin: 0;
+    word-break: break-word;
+    flex: 1;
+    min-width: 200px;
 }
 
 .fade-out {
@@ -121,5 +151,54 @@ button {
 .remove-to-do {
     background-color: indianred;
     color: #E7F6F2;
-    padding: 9px;
+    padding: 8px 16px;
+    min-width: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .main {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .input-area {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .text-input {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .btn-submit {
+        width: auto;
+        align-self: center;
+    }
+    
+    button {
+        min-width: 120px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .to-do-item {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .remove-to-do {
+        width: 100%;
+    }
 }
